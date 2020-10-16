@@ -351,6 +351,29 @@ public class CalculatorUI extends JFrame {
         this.getContentPane().add(button_modulus);
 // 327, 242, 75, 40
 
+//Percent button added here
+        final JButton button_percent = new JButton("percent");
+        button_percent.addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                button_modulus.setBackground(Color.BLACK);
+            }
+
+            public void mouseReleased(MouseEvent e) {
+                button_modulus.setBackground(Color.GREEN);
+            }
+        });
+        button_percent.addActionListener((e) -> {
+            this.saveValueOfArg1();
+            this.saveValueOfMathOp(OPERATOR.PERCENT);
+        });
+        button_percent.setOpaque(true);
+        button_percent.setForeground(Color.BLACK);
+        button_percent.setBorder(new MatteBorder(4, 4, 4, 4, Color.BLACK));
+        button_percent.setBackground(Color.GREEN);
+        button_percent.setBounds(327, 294, 75, 40);
+        this.getContentPane().add(button_percent);
+    //327, 160, 75, 40
+
         final JButton button_equals = new JButton("=");
         button_equals.addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
@@ -369,7 +392,7 @@ public class CalculatorUI extends JFrame {
         button_equals.setForeground(Color.BLACK);
         button_equals.setBorder(new MatteBorder(4, 4, 4, 4, Color.BLACK));
         button_equals.setBackground(Color.GREEN);
-        button_equals.setBounds(327, 294, 75, 40);
+        button_equals.setBounds(327, 360, 75, 40);
         this.getContentPane().add(button_equals);
         final JButton button_clear = new JButton("AC");
         button_clear.addMouseListener(new MouseAdapter() {

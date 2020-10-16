@@ -27,6 +27,9 @@ public class Math {
             case MODULUS:
                 calcAnswer = arg1 % arg2;
                 break;
+            case PERCENT:
+                calcAnswer = (arg1 / 100) * arg2;
+                break;
             case NOOP:
             default:
                 calcAnswer = arg1;
@@ -41,7 +44,8 @@ public class Math {
         MINUS,
         DIVIDE,
         MULTIPLY,
-        MODULUS;
+        MODULUS,
+        PERCENT;
 
         private OPERATOR() {
         }
