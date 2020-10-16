@@ -24,6 +24,9 @@ public class Math {
             case MULTIPLY:
                 calcAnswer = arg1 * arg2;
                 break;
+            case MODULUS:
+                calcAnswer = arg1 % arg2;
+                break;
             case NOOP:
             default:
                 calcAnswer = arg1;
@@ -37,7 +40,8 @@ public class Math {
         PLUS,
         MINUS,
         DIVIDE,
-        MULTIPLY;
+        MULTIPLY,
+        MODULUS;
 
         private OPERATOR() {
         }
